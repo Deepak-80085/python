@@ -1,7 +1,7 @@
 print("----SIMPLE CALCULATOR ---------")
 
 while True: 
-    x = input("Enter an operator [add, sub, multi, div, exit]: ")
+    x = input("Enter an operator [add +, sub -, multi *, div /, exit]: ")
     
     if x.lower() == 'exit':
         break 
@@ -10,22 +10,22 @@ while True:
     b = int(input("Enter b: "))
     
     match x:
-        case 'add':
+        case '+':
             c = a + b
             print("-------------------")
             print(c)
             print("-------------------")
-        case 'sub':
+        case '-':
             c = a - b
             print("-------------------")
             print(c)
             print("-------------------")
-        case 'multi':
+        case '*':
             c = a * b
             print("-------------------")
             print(c)
             print("-------------------")
-        case 'div':
+        case '/':
             if b != 0: 
                 c = a / b
                 print("-------------------")
