@@ -4,7 +4,7 @@ def add(a,b):
     len_arr = len(a)
     if len(a) > len(b):
         len_arr = len(b)
-    print(len_arr)
+    # print(len_arr)
     c = []
     for i in range(len_arr):
         c.append(a[i] + b[i])
@@ -14,20 +14,10 @@ def sub(a,b):
     len_arr = len(a)
     if len(a) > len(b):
         len_arr = len(b)
-    print(len_arr)
+    # print(len_arr)
     c = []
     for i in range(len_arr):
         c.append(a[i] - b[i])
-    print(c)
-    
-def multi(a,b):
-    len_arr = len(a)
-    if len(a) > len(b):
-        len_arr = len(b)
-    print(len_arr)
-    c = []
-    for i in range(len_arr):
-        c.append(a[i] * b[i])
     print(c)
 
 def main():
@@ -49,7 +39,5 @@ def main():
             add(a,b)
         case 2:
             sub(a,b)
-        case 3:
-            multi(a,b)
-
 main()
+ 

@@ -1,7 +1,7 @@
 def main():
     x = int(input("Enter  x : "))
     y = int(input("Enter  y : "))
-    max = 0
+    max = 0     
     if x>y:
         max = x
     else:
