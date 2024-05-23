@@ -1,9 +1,9 @@
 print("Convert Celsius into Kevlin or Fahrenheit")
 while True:
-    check = int(input("1) Kelvin or 2) Fahrenheit 3)exit:"))
-    cel = int(input("Enter the temperature value in celsius : "))
+    check = int(input("1) Kelvin or 2) Fahrenheit 3)exit: "))
     if(check >=3):
         break
+    cel = int(input("Enter the temperature value in celsius : "))
     match check:
         case 1:
             print("The temperature in kelvin is ",cel+273.5)

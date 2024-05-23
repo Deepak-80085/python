@@ -2,12 +2,14 @@
 
 import re
 from datetime import date
+
 def check_birthdate():
     data = (input("Enter your birthdate in YYYY-MM-DD format : "))
     if re.match(r'\d{4}-\d{2}-\d{2}',data):
         return data
     else:
         print("Invalid format. Please enter the date in the format YYYY-MM-DD.")
+
 def check(birthdate):
     today = date.today()
     no_of_days = (today - birthdate).days
