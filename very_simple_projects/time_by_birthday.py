@@ -1,30 +1,29 @@
-# To check number of days lived until today from your birthdate
-
-import re
+#To calculate the number of days, months, and years between the birthdate and the current date.
 from datetime import date
 
 def check_birthdate():
-    data = (input("Enter your birthdate in YYYY-MM-DD format : "))
-    if re.match(r'\d{4}-\d{2}-\d{2}',data):
-            return data
-    else:
-        print("Invalid format. Please enter the date in the format YYYY-MM-DD.")
+    while True:
+        try:
+            data = input("Enter your birthdate in YYYY-MM-DD format: ")  # Prompt user to enter birthdate
+            birthdate = date.fromisoformat(data)  # Convert input string to date object
+            if birthdate <= date.today():  # Check if birthdate is valid or in the past
+                return birthdate
+            else:
+                print("Invalid date. Please enter a valid or past date.")  # Display error message for invalid future date
+        except ValueError:
+            print("Invalid input.")  # Display error message for invalid input format
 
 def check(birthdate):
     today = date.today()
-    no_of_days = (today - birthdate).days
-    years = no_of_days // 365
-    no_of_months = (no_of_days ) // 30 
-    months = (no_of_days - (years * 365)) // 30
-    days = (no_of_days - (years * 365) -(months * 30))
-    print("no of days are :",no_of_days)
-    print("no of months",no_of_months)
-    print("no of year : ",years)
-    print(f"Therefore total no years {years}, months {months}, days {days}")
+    no_of_days = (today - birthdate).days  # Calculate the number of days between birthdate and today
+    years = no_of_days // 365  # Calculate the number of years
+    no_of_months = (no_of_days) // 30  # Calculate the number of months
+    print("Number of days:", no_of_days)  # Display the number of days
+    print("Number of months:", no_of_months)  # Display the number of months
+    print("Number of years:", years)  # Display the number of years
 
 def main():
-    birthdate = check_birthdate()
-    check(date.fromisoformat(birthdate))
+    birthdate = check_birthdate()  # Get the birthdate from user
+    check(birthdate)  # Calculate and display the number of days, months, and years
 
-main()                                                                                                  
-
+main()  # Call the main function
